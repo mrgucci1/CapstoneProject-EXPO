@@ -29,7 +29,10 @@
     "react-native-gesture-handler": "~1.5.0",
     "react-native-safe-area-context": "0.6.0",
     "react-native-screens": "2.0.0-alpha.12",
+<<<<<<< HEAD
     "react-native-table-component": "^1.2.1",
+=======
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
     "react-native-web": "~0.11.7"
   },
   "devDependencies": {

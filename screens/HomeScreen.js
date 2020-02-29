@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component } from 'react';
 import { Image, Platform, StyleSheet, Text, TouchableOpacity, View, Alert } from 'react-native';
 import { ScrollView, Switch } from 'react-native-gesture-handler';
@@ -67,11 +68,71 @@ _alertIndex(index) {
 }
 
 
+=======
+import * as React from 'react';
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+import * as WebBrowser from 'expo-web-browser';
+
+import { MonoText } from '../components/StyledText';
+
+export default function HomeScreen() {
+  return (
+    <View style={styles.container}>
+      <ScrollView style={styles.container} contentContainerStyle={styles.contentContainer}>
+        <View style={styles.welcomeContainer}>
+          <Image
+            source={
+              __DEV__
+                ? require('../assets/images/robot-dev.png')
+                : require('../assets/images/robot-prod.png')
+            }
+            style={styles.welcomeImage}
+          />
+        </View>
+
+        <View style={styles.getStartedContainer}>
+          <DevelopmentModeNotice />
+
+          <Text style={styles.getStartedText}>Open up the code for this screen:</Text>
+
+          <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
+            <MonoText>screens/HomeScreen.js</MonoText>
+          </View>
+
+          <Text style={styles.getStartedText}>
+            Change any of the text, save the file, and your app will automatically reload.
+          </Text>
+        </View>
+
+        <View style={styles.helpContainer}>
+          <TouchableOpacity onPress={handleHelpPress} style={styles.helpLink}>
+            <Text style={styles.helpLinkText}>Help, it didn’t automatically reload!</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
+
+      <View style={styles.tabBarInfoContainer}>
+        <Text style={styles.tabBarInfoText}>This is a tab bar. You can edit it in:</Text>
+
+        <View style={[styles.codeHighlightContainer, styles.navigationFilename]}>
+          <MonoText style={styles.codeHighlightText}>navigation/BottomTabNavigator.js</MonoText>
+        </View>
+      </View>
+    </View>
+  );
+}
+
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
 HomeScreen.navigationOptions = {
   header: null,
 };
 
+<<<<<<< HEAD
 /*function DevelopmentModeNotice() {
+=======
+function DevelopmentModeNotice() {
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
   if (__DEV__) {
     const learnMoreButton = (
       <Text onPress={handleLearnMorePress} style={styles.helpLinkText}>
@@ -92,9 +153,15 @@ HomeScreen.navigationOptions = {
       </Text>
     );
   }
+<<<<<<< HEAD
 }*/
 
 /*function handleLearnMorePress() {
+=======
+}
+
+function handleLearnMorePress() {
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
   WebBrowser.openBrowserAsync('https://docs.expo.io/versions/latest/workflow/development-mode/');
 }
 
@@ -102,6 +169,7 @@ function handleHelpPress() {
   WebBrowser.openBrowserAsync(
     'https://docs.expo.io/versions/latest/get-started/create-a-new-app/#making-your-first-change'
   );
+<<<<<<< HEAD
 }*/
 
 const styles = StyleSheet.create({
@@ -111,6 +179,14 @@ const styles = StyleSheet.create({
   row: { flexDirection: 'row', backgroundColor: '#FFF1C1' },
   btn: { width: 58, height: 18, backgroundColor: '#46352D',  borderRadius: 2 },
   btnText: { textAlign: 'center', color: '#fff' 
+=======
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
   },
   developmentModeText: {
     marginBottom: 20,

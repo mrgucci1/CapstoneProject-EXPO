@@ -5,7 +5,10 @@ import HomeScreen from '../screens/HomeScreen';
 import LinksScreen from '../screens/LinksScreen';
 import Create from '../screens/Create';
 import Login from '../screens/Login';
+<<<<<<< HEAD
 import Events from '../screens/Events';
+=======
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
 
 const BottomTab = createBottomTabNavigator();
 const INITIAL_ROUTE_NAME = 'Home';
@@ -42,6 +45,7 @@ export default function BottomTabNavigator({ navigation, route }) {
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="logo-bitcoin" />,
         }}
       />
+<<<<<<< HEAD
       <BottomTab.Screen
         name="Events"
         component={Events}
@@ -50,6 +54,8 @@ export default function BottomTabNavigator({ navigation, route }) {
           tabBarIcon: ({ focused }) => <TabBarIcon focused={focused} name="md-book" />,
         }}
       />
+=======
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
     </BottomTab.Navigator>
   );
 }
@@ -66,7 +72,10 @@ function getHeaderTitle(route) {
       return 'Login Screen';
     case 'Create':
       return 'Create Screen';
+<<<<<<< HEAD
     case 'Events':
       return 'Events Screen';
+=======
+>>>>>>> 9aadebeb69d6dde9beddb612854811562ec5ef41
   }
 }
